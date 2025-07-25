@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <model name="boxmain">
+    <static>true</static> <!-- Set to true if the object should not move -->
+    <link name="boxmain_link">
+      <!-- Inertial properties are still good to keep even if no collision,
+           as they might be used for other purposes, though minimal for a static visual. -->
+      <inertial>
+        <mass>0.1</mass>
+        <inertia>
+          <ixx>0.0001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0001</iyy>
+          <iyz>0</iyz>
+          <izz>0.0001</izz>
+        </inertia>
+      </inertial>
+      <visual name="boxmain_visual">
+        <geometry>
+          <mesh>
+            <!--
+              The URI path should be relative to where your model.sdf file is located.
+              If the DAE and texture are in the same folder as the SDF, it's just the filename.
+            -->
+            <uri>model://boxmain/boxmain.dae</uri>
+            <scale>0.003 0.003 0.003</scale> <!-- Adjust scale if needed -->
+          </mesh>
+        </geometry>
+
+      </visual>
+      <!-- The <collision> tag has been removed to make the object pass through. -->
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<sdf version="1.5">
+    <model name="SAE_blue_circle">
+        <static>true</static>
+        <link name="SAE_blue_circle_link">
+            <pose>0 0 1e-3 0 0 1.5707963267948966</pose>
+            <visual name="visual_SAE_blue_circle">
+                <cast_shadows>false</cast_shadows>
+                <geometry><box><size>0.8 0.8 1e-3</size></box></geometry>
+                <material>
+                    <script>
+                        <uri>model://SAE_blue_circle/materials/scripts</uri>
+                        <uri>model://SAE_blue_circle/materials/textures</uri>
+                        <name>SAE_blue_circle/SAE_blue_circle</name>
+                    </script>
+                </material>
+            </visual>
+        </link>
+    </model>
+</sdf>
